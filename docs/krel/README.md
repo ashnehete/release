@@ -30,18 +30,27 @@ krel has several subcommands that perform various tasks during the release lifec
 
 | Subcommand                          | Description                                                                                 |
 | ----------------------------------- | --------------------------------------------------------------------------------------------|
-| announce                            | Build and announce Kubernetes releases                                                      |
+| [announce](announce.md)             | Build and announce Kubernetes releases                                                      |
 | [changelog](changelog.md)           | Automate the lifecycle of CHANGELOG-x.y.{md,html} files in a k/k repository                 |
-| ci-build                            | Build Kubernetes in CI and push release artifacts to Google Cloud Storage (GCS)             |
-| cve                                 | Add and edit CVE information                                                                |
+| [ci-build](ci-build.md)             | Build Kubernetes in CI and push release artifacts to Google Cloud Storage (GCS)             |
+| [cve](cve.md)                       | Add and edit CVE information                                                                |
 | [ff](ff.md)                         | Fast forward a Kubernetes release branch                                                    |
-| history                             | Run history to build a list of commands that ran when cutting a specific Kubernetes release |
-| promote-images                      | Starts an image promotion for a tag of kubernetes images                                    |
+| [history](history.md)               | Run history to build a list of commands that ran when cutting a specific Kubernetes release |
+| [promote-images](promote-images.md) | Starts an image promotion for a tag of kubernetes images                                    |
 | [push](push.md)                     | Push Kubernetes release artifacts to Google Cloud Storage (GCS)                             |
-| release                             | Release a staged Kubernetes version                                                         |
+| [release](release.md)               | Release a staged Kubernetes version                                                         |
 | [release-notes](release-notes.md)   | The subcommand of choice for the Release Notes subteam of SIG Release                       |
-| stage                               | Stage a new Kubernetes version                                                              |
-| testgridshot                        | Take a screenshot of the testgrid dashboards                                                |
+| [stage](stage.md)                   | Stage a new Kubernetes version                                                              |
+| [testgridshot](testgridshot.md)     | Take a screenshot of the testgrid dashboards                                                |
+
+### Command Line Flags
+
+```
+Flags:
+  -h, --help               help for krel
+      --log-level string   the logging verbosity, either 'panic', 'fatal', 'error', 'warning', 'info', 'debug', 'trace' (default "info")
+      --nomock             run the command to target the production environment
+```
 
 ## Important Notes
 
